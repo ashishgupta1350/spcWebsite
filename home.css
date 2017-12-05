@@ -13,7 +13,7 @@ h1{
     text-align:center;
     font-size:180%;/*This is experimented, you would have to experiment with that*/
     line-height:120%;
-    padding: 5% 0;
+    padding: 3% 0;
 
 }
 h2{
@@ -90,11 +90,11 @@ nav ul li{
     padding:10px;
 }
 .current{
-    color:blue;
+    color:rgb(187, 187, 233);
     text-decoration: underline;
 }
 #doc{
-    margin : 40px 0;
+    margin : 0px 0;
 
 }
 #content{
@@ -114,6 +114,7 @@ section{
 }
 #threesection img{
     width:70px;
+    
 }
 .clear{
     clear:both;
@@ -123,6 +124,7 @@ section{
 /* Here we Go with the changes in the event section*/
 #event1{
     width:100%;
+    overflow:hidden;
 }
 article#corpo{
     float:left;
@@ -137,14 +139,16 @@ aside#corpo{
     border:2px black solid;
     float:right;
     margin:0 auto;
-    width:35%;
+    width:33%;
     height:auto;
     padding:3%;
+    margin-right:2%;
 }
 
 #event2{
     width:100%;
     padding:0%;
+    overflow:hidden;
 }
 article#orientation{
     border:2px black solid;
@@ -153,16 +157,16 @@ article#orientation{
     width:40%;
     height:auto;
     padding-bottom:0%;
-    padding-left:3%;
+    margin-left:3%;
 
 }
 aside#orientation{
     float:right;
     margin:0 auto;
-    width:38%;
+    width:49%;
     height:auto;
     padding-right:2%;
-    padding-bottom:.8%
+    
 }
 #teams{
     width:100%;
@@ -209,4 +213,95 @@ footer.second{
 #spcLogo{
     max-height:50%;
 
+}
+/*-------------------------------------Media Files-------------------------------------------*/
+@media screen and (max-width: 740px){
+    body{
+        position: absolute;
+    }
+    header{
+        position:absolute;
+    }
+    #menu-icon{
+        display:inline-block;
+    }
+    nav ul,nav:active ul{
+        /* we dont want that inline block thing to display at the phone width, so it  better hide*/
+        display:none;/*wont display it*/
+        position:absolute;
+        padding:20px;
+        /*there were to maintain the height and width*/
+        background: #405580;
+        border:1px solid #fff;
+        right:20px;
+        top:60px;
+        width: 50%;
+        border-radius:2px 0 2px 2px;
+    }
+    nav li{
+        text-align:center;
+        width:100%;
+        padding:10px 0;
+        margin:0px;
+    }
+    nav:hover ul{
+        display:block;
+    }
+    section{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+
+    }
+    section{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+
+    }
+    article#orientation{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+        border:0px solid white;
+
+    }
+    
+    aside#orientation{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+        border:0px;
+        border-bottom: 2px solid rgb(26, 20, 20);
+    }
+    article#corpo{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+        border:0px solid white;
+
+    }
+    
+    aside#corpo{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+        border:0px;
+        border-bottom: 2px solid rgb(202, 196, 196);
+
+    }
+    #teams section{
+        float:left;
+        width:100%;
+        margin:0;
+        padding: 0;
+        border-bottom: 2px solid rgb(206, 199, 199);
+        
+    }
 }
